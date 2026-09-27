@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "foad bishara",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 46.7, "left": -125, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "pot1:VCC", "red", [ "h-43.01", "v105.6", "h-38.4" ] ],
+    [ "esp:GND.1", "pot1:GND", "black", [ "h-100.61" ] ],
+    [ "esp:12", "pot1:SIG", "green", [ "v0", "h-91.01" ] ]
+  ],
+  "dependencies": {}
+}
